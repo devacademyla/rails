@@ -1,0 +1,17 @@
+<h1><%= @serie.nombre %></h1>
+<h3>Descripción:</h3>
+<p><%= @serie.descripcion %></p>
+<h3>Temporadas:</h3>
+<ol>
+<% @serie.temporadas.each do |temporada| %>
+  <li><%= temporada.resumen %>
+    <h4>Capítulos:</h4>
+    <ul>
+    <% temporada.caps.each do |cap| %>
+      <li><%= cap %></li>
+    <% end %>
+    </ul>
+  </li>
+<% end %>
+<%= link_to 'Agregar temporada', new_serie_temporada_path(serie_id: @serie.id) %>
+</ol>

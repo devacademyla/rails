@@ -1,0 +1,24 @@
+<%= form_tag series_path do %>
+
+  <div>
+    <label>Nombre:</label>
+    <%= text_field_tag :nombre %>
+  </div>
+
+  <div>
+    <label for="">Descripción</label>
+    <%= text_area_tag :descripcion %>
+  </div>
+
+  <% if @serie.errors.any? %>
+    <h2>Errores encontrados:</h2>
+
+    <ul>
+      <% @serie.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <%= submit_tag %>
+<% end %>

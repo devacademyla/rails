@@ -1,0 +1,11 @@
+<%= form_tag serie_temporadas_path do %>
+  <div>
+    <label>Resumen:</label>
+    <%= text_area_tag :resumen %>
+  </div>
+  <div>
+    <label>Capítulos (separados por una coma ,):</label>
+    <%= text_field_tag :capitulos %>
+  </div>
+  <%= submit_tag %>
+<% end %>
