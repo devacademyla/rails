@@ -1,0 +1,2 @@
+module SaludoHelper
+end
